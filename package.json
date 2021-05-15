@@ -1,0 +1,29 @@
+{
+  "name": "diplom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.dev.config.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.config.js",
+    "dev": "webpack serve --config webpack.dev.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kogut-Pavel/diplom.git"
+  },
+  "keywords": [],
+  "author": "Kogut Pavel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kogut-Pavel/diplom/issues"
+  },
+  "homepage": "https://github.com/Kogut-Pavel/diplom#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
