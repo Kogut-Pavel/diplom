@@ -5,8 +5,7 @@ const togglePopUp = () => {
     modalContent = document.querySelector('.modal-callback'),
     modalOverlay = document.querySelector('.modal-overlay');
 
-    btn.addEventListener('click', () => {
-      
+    btn.addEventListener('click', () => { 
       modalOverlay.style.display = 'block';
       modalContent.style.display = 'block';
     });
@@ -18,12 +17,7 @@ const togglePopUp = () => {
         modalContent.style.display = 'none';
         modalOverlay.style.display = 'none';
       }  
-      console.log(target);
-      
-     
     });
 };
-
-togglePopUp();
 
 export default togglePopUp;
