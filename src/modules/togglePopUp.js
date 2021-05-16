@@ -4,10 +4,14 @@ const togglePopUp = () => {
   const btn = document.querySelector('#popupBtn'),
     modalContent = document.querySelector('.modal-callback'),
     modalOverlay = document.querySelector('.modal-overlay');
-
-    btn.addEventListener('click', () => { 
-      modalOverlay.style.display = 'block';
-      modalContent.style.display = 'block';
+  
+    document.addEventListener('click', (event) => {
+      let target = event.target;
+      if (target.matches('#popupBtn') || target.matches('.button-services') || target.matches('.absolute')) {
+        modalOverlay.style.display = 'block';
+        modalContent.style.display = 'block';
+      }
+    
     });
 
     document.addEventListener('click', (event) => {
