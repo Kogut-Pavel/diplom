@@ -1,9 +1,9 @@
 'use strict';
 
 const togglePopUp = () => {
-  const btn = document.querySelector('#popupBtn'),
-    modalContent = document.querySelector('.modal-callback'),
-    modalOverlay = document.querySelector('.modal-overlay');
+  
+   const modalContent = document.querySelector('.modal-callback'),
+      modalOverlay = document.querySelector('.modal-overlay');
   
     document.addEventListener('click', (event) => {
       let target = event.target;

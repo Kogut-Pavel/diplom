@@ -14,9 +14,17 @@ const smoothScrolling = () => {
      });
     }
 
-  const arrowUp = document.querySelector('.up');
+  let arrowUp = document.querySelector('.up');
   const clientHeight = document.documentElement.clientHeight;
   arrowUp.style.display = 'none';
+  
+  arrowUp.addEventListener('click', () => {
+    document.querySelector('body').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  });
+  
   window.addEventListener('scroll', () => {
     if (document.body.scrollTop > clientHeight || document.documentElement.scrollTop > clientHeight) {
       arrowUp.style.display = 'block';
@@ -24,12 +32,6 @@ const smoothScrolling = () => {
       arrowUp.style.display = 'none';
     } 
   });
-
-  arrowUp.addEventListener('click', () => {
-    window.scrollTo(0, 0);
-    
-  });
-  
 };
 
 export default smoothScrolling;

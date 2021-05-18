@@ -2,13 +2,10 @@
 
 import togglePopUp from './modules/togglePopUp';
 import smoothScrolling from './modules/smoothScrolling';
-import mainSlider from './modules/mainSlider';
-
+import accordeon from './modules/accordeon';
 
 togglePopUp();
 
 smoothScrolling();
 
-mainSlider();
-
-
+accordeon();

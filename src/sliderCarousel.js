@@ -43,7 +43,6 @@ class SliderCarousel {
     
   }
   
-
   addGloClass() {
     this.main.classList.add('glo-slider');
     this.wrap.classList.add('glo-slider__wrap');
@@ -163,6 +162,5 @@ class SliderCarousel {
     window.addEventListener('resize', checkResponse);
 
   } 
-
 }
 
