@@ -853,9 +853,17 @@ hr.white {
 	height: 450px;
 }
 .top-slider .item {
+	opacity: 0;
 	overflow: hidden;
 	height: 450px;
-	position: relative;
+	position: absolute;
+	left: 0;
+	right: 0;
+	transition: 0.5s;
+  }
+.top-slider .item-active {
+	opacity: 1;
+	transition: 0.5s;
 }
 .top-slider .item:before {
 	content: "";
