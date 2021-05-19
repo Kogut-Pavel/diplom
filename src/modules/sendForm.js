@@ -59,7 +59,7 @@ const sendForm = () => {
         popup.style.display = 'none';
         overlay.style.display = 'none';
       }
-      
+
       form.addEventListener('submit', event => {
         
         event.preventDefault();
@@ -80,9 +80,8 @@ const sendForm = () => {
             console.error(error);
           });
       });
-  
+   
       
-  
       form.addEventListener('input', checkInputs);
       
     };
