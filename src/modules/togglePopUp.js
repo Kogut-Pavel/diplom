@@ -8,6 +8,7 @@ const togglePopUp = () => {
     document.addEventListener('click', (event) => {
       let target = event.target;
       if (target.matches('#popupBtn') || target.matches('.button-services') || target.matches('.absolute')) {
+        event.preventDefault();
         modalOverlay.style.display = 'block';
         modalContent.style.display = 'block';
       }

@@ -9,17 +9,6 @@ const sendForm = () => {
       },
       body: JSON.stringify(body)
     });
-  
-    const clearInput = idForm => {
-      const form = document.getElementById(idForm);
-  
-      [...form.elements]
-        .filter(item =>
-          item.tagName.toLowerCase() !== 'button' &&
-          item.type !== 'button')
-        .forEach(item =>
-          item.value = '');
-    };
       
       const checkInputs = (event) => {
         const target = event.target;
@@ -35,7 +24,9 @@ const sendForm = () => {
     const processingForm = idForm => {
       const form = document.getElementById(idForm);
       const statusMessage = document.createElement('div');
-      
+      const popup = document.querySelector('.modal-callback');
+      const overlay = document.querySelector('.modal-overlay');
+
       const showStatus = status => {
         const img = document.createElement('img');
         const statusList = {
@@ -64,20 +55,23 @@ const sendForm = () => {
       function deleteMessage() {
         statusMessage.parentNode.removeChild(statusMessage);
       }
+      function closeModal() { 
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+      }
       
       form.addEventListener('submit', event => {
-        const popup = document.querySelector('.popup');
+        
         event.preventDefault();
         showStatus('load');
         form.appendChild(statusMessage);
         postData(Object.fromEntries(new FormData(form)))
           .then(response => {
             if (response.status !== 200) {
-              throw new Error('Status network ${request.status}');
+              throw new Error(`Status network ${response.status}`);
             }
             showStatus('success');
-            clearInput(idForm);
-            popup.style.display = 'none';
+            setTimeout(closeModal, 3000);
             setTimeout(deleteMessage, 3000);
           })
           .catch(error => {

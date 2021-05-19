@@ -3,9 +3,7 @@
 const slider = () => {
 
   const slide = document.querySelectorAll(".item");
-  const bigs = document.querySelectorAll('.big');
   let currentSlide = 0;
-  let currentBig = 0;
 
   const autoPlaySlide = () => { 
     slide[currentSlide].classList.remove("item-active");

@@ -939,25 +939,6 @@ video#video_background {
 	.top-slider {
 		height: 520px;
 	}
-	.top-slider .table {
-		opacity: 0;
-		visibility: hidden;
-		-webkit-transform: scale(1.5);
-		-ms-transform: scale(1.5);
-		-o-transform: scale(1.5);
-		transform: scale(1.5);
-		-webkit-transition: 0.5s;
-		-o-transition: 0.5s;
-		transition: 0.5s;
-	}
-	.top-slider .table.active {
-		webkit-transform: scale(1);
-		-ms-transform: scale(1);
-		-o-transform: scale(1);
-		transform: scale(1);
-		opacity: 1;
-		visibility: visible;
-	}
 }
 
 @media only screen and (min-width: 1240px) {
